@@ -83,7 +83,7 @@
         <h2 class="section-title">Our Space & Dishes</h2>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Restaurant Interior">
+                <img src="images/conference.jpg" alt="Restaurant Interior">
                 <div class="gallery-overlay">
                     <h3>Elegant Interior</h3>
                     <p>Private dining rooms available</p>
@@ -260,6 +260,9 @@
         </div>
     </section>
 
+    
+
+
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <h2 class="section-title">Visit Us</h2>
@@ -283,9 +286,12 @@
         </div>
 
         <div style="margin-top: 3rem;">
-            <a href="#" class="btn btn-primary" style="padding: 1rem 3rem; font-size: 1.1rem;">
-                <i class="fas fa-directions"></i> Get Directions
-            </a>
+            <a href="https://maps.google.com/?q=Kasha+Restaurant+and+Lounge"
+                  target="_blank"
+                    class="btn btn-primary"
+                    style="padding: 1rem 3rem; font-size: 1.1rem;">
+         <i class="fas fa-directions"></i> Get Directions
+         </a>
         </div>
         
         <p style="margin-top: 2rem; color: #666; font-size: 0.9rem;">
@@ -299,59 +305,14 @@
         <p>&copy; 2026 Kasha Restaurant and Lounge. All rights reserved.</p>
         <p style="margin-top: 0.5rem; opacity: 0.8; font-size: 0.9rem;">
             <i class="fas fa-star" style="color: var(--primary);"></i> 
-            Rated 4.5/5 by 45 guests
+            <span>Rated 4.5/5 on Google</span>
         </p>
     </footer>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Mobile menu toggle
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const navLinks = document.querySelector('.nav-links');
-        
-        mobileMenu.addEventListener('click', () => {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-            if (navLinks.style.display === 'flex') {
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '100%';
-                navLinks.style.left = '0';
-                navLinks.style.right = '0';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.background = 'white';
-                navLinks.style.padding = '2rem';
-                navLinks.style.boxShadow = '0 5px 20px rgba(0,0,0,0.1)';
-            }
-        });
-
-        // Animation on scroll
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.feature-card, .gallery-item').forEach((el) => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-    </script>
+    <script src="index.js"></script>
+    <div >
+        <a href="https:wa.me/+233541737618" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> 
+        </a></div>
 </body>
 </html>
